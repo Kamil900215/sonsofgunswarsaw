@@ -1,0 +1,592 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  border-bottom: 1px solid gray;
+  background-color: white;
+  z-index: 99;
+}
+
+.topLeft, .topRight {
+  flex: 3;
+  display: flex;
+  align-items: center;
+}
+.topLeft .socials, .topRight .socials {
+  font-size: 35px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.topCenter {
+  flex: 9;
+}
+.topCenter .navbarList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.topCenter .navbarList .item {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.topRight .profileImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.topRight .searchIcon {
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+  margin-left: 15px;
+}
+
+.header {
+  margin-top: 60px;
+}
+.header .headerImage {
+  width: 100%;
+  height: 100vh;
+  margin-top: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .headerTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  color: #444;
+}
+.header .headerTitles .headerTitleSmall {
+  position: absolute;
+  top: 18%;
+}
+.header .headerTitles .headerTitleLarge {
+  position: absolute;
+  top: 10%;
+  font-size: 100px;
+}
+
+.home {
+  display: flex;
+}
+
+.sidebar {
+  flex: 3;
+  margin: 20px;
+  padding-bottom: 30px;
+  background-color: purple;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar .sidebarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar .sidebarItem .sidebarTitle {
+  margin: 10px;
+  padding: 5px;
+  width: 80%;
+  border-top: 1px solid #a7a4a4;
+  border-bottom: 1px solid #a7a4a4;
+  font-family: "Josefin Sans", sans-serif;
+  color: gold;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}
+.sidebar .sidebarItem .sidebarImg {
+  margin-top: 15px;
+  width: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px;
+}
+.sidebar .sidebarItem .sidebarList {
+  list-style: none;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+.sidebar .sidebarItem .sidebarList .sidebarListItem {
+  display: inline-block;
+  width: 50%;
+  color: gold;
+}
+.sidebar .sidebarItem .siebarSocial {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sidebar .sidebarItem .siebarSocial .sidebarSocialIcon {
+  padding: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  color: gold;
+}
+.sidebar .sidebarItem p {
+  padding: 20px;
+  color: gold;
+}
+
+.post {
+  flex: 8;
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.addPost {
+  width: 485px;
+  margin: 20px 25px 40px 25px;
+}
+.addPost .postImg {
+  width: 100%;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.addPost .postInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.addPost .postInfo .postCategory {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 11px;
+  color: gold;
+  line-height: 20px;
+  margin-top: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.addPost .postInfo .postTitle {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.addPost .postInfo .postDate {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 13px;
+  color: gray;
+  margin-top: 5px;
+}
+.addPost .postDescription {
+  font-size: 14px;
+  color: #444;
+  line-height: 24px;
+  margin-top: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.single {
+  display: flex;
+}
+
+.singlePost {
+  flex: 9;
+}
+.singlePost .singlePostWrapper {
+  margin-top: 20px;
+}
+.singlePost .singlePostWrapper .singlePostImage {
+  width: 100%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.singlePost .singlePostWrapper .singlePostTitle {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 28px;
+}
+.singlePost .singlePostWrapper .singlePostEdit {
+  float: right;
+  font-size: 16px;
+}
+.singlePost .singlePostWrapper .singlePostEdit .singlePostIcon {
+  margin-left: 10px;
+}
+.singlePost .singlePostWrapper .singlePostEdit .singlePostIcon:first-child {
+  color: teal;
+}
+.singlePost .singlePostWrapper .singlePostEdit .singlePostIcon:last-child {
+  color: tomato;
+}
+.singlePost .singlePostWrapper .singlePostInfo {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: gold;
+}
+.singlePost .singlePostWrapper .singlePostDescription {
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
+}
+.singlePost .singlePostWrapper .singlePostDescription::first-letter {
+  margin-left: 60px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.writePost {
+  padding-top: 50px;
+}
+.writePost .addPostImg {
+  margin-left: 150px;
+  width: 50%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.writePost .writeForm {
+  position: relative;
+}
+.writePost .writeForm .writeFormGroup {
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+}
+.writePost .writeForm .writeFormGroup .addFromIcon {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: lightgray;
+  cursor: pointer;
+}
+.writePost .writeForm .writeFormGroup .writeInput {
+  font-size: 20px;
+  border: none;
+  padding: 15px;
+  width: 70vw;
+}
+.writePost .writeForm .writeFormGroup .writeInput:focus {
+  outline: none;
+}
+.writePost .writeForm .writeFormGroup .writeText {
+  font-size: 15px;
+}
+.writePost .writeForm .onSubmit {
+  position: absolute;
+  top: 20;
+  right: 50px;
+  color: white;
+  background-color: teal;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.settings {
+  display: flex;
+  flex-direction: row;
+}
+.settings .settingsWrapper {
+  flex: 9;
+  padding: 20px;
+}
+.settings .settingsWrapper .settingsTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.settings .settingsWrapper .settingsTitle .settingsUpdateTitle {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: coral;
+}
+.settings .settingsWrapper .settingsTitle .settingsDeleteTitle {
+  color: red;
+  font-size: 12px;
+  cursor: pointer;
+}
+.settings .settingsWrapper .settingForm {
+  display: flex;
+  flex-direction: column;
+}
+.settings .settingsWrapper .settingForm .settingsProfilePicture {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.settings .settingsWrapper .settingForm .settingsProfilePicture .settingsAddedProfilePic {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.settings .settingsWrapper .settingForm .settingsProfilePicture .settingsProfilePictureIcon {
+  width: 25px;
+  height: 25px;
+  font-size: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.settings .settingsWrapper .settingForm > label {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.settings .settingsWrapper .settingForm > input {
+  color: gray;
+  margin: 10px 0;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.settings .settingsWrapper .settingForm .settingsSubmit {
+  width: 150px;
+  align-self: center;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: green;
+  cursor: pointer;
+}
+
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../../images/login.jpg");
+  background-size: cover;
+}
+.login .loginTitle {
+  font-size: 50px;
+}
+.login .loginForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.login .loginForm > label {
+  margin: 10px 0;
+}
+.login .loginForm > input {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.login .loginForm .logInButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: coral;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+.login .registerInButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: teal;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+.register {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../../images/login.jpg");
+  background-size: cover;
+}
+.register .registerTitle {
+  font-size: 50px;
+}
+.register .registerForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.register .registerForm > label {
+  margin: 10px 0;
+}
+.register .registerForm > input {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.register .registerForm .registerButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: teal;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+.register .registerLogInButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: coral;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.joinus {
+  max-width: 100%;
+}
+.joinus .joinusForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: auto;
+}
+.joinus .joinusForm .joinusLabel {
+  font-size: 24px;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 30px;
+}
+.joinus .joinusForm .joinusInput {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  width: 150px;
+}
+.joinus .joinusForm .joinusInput:hover {
+  cursor: pointer;
+}
+.joinus .joinusForm .joinusButton {
+  border: none;
+  background-color: purple;
+  color: white;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 6px;
+}
+.joinus .joinusForm .joinusButton:hover {
+  border: 1px solid gold;
+  cursor: pointer;
+}
+.joinus .joinusForm .joinusTextarea {
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  width: 300px;
+  height: 100px;
+  transition: all 0.2s;
+}
+.joinus .joinusForm .joinusTextarea:hover {
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,18 @@
+@import './generic/reset';
+@import '../src/components/navbar/_navbar.scss';
+@import '../src/components/header/_header.scss';
+@import '../src/components/pages/home/_home.scss';
+@import '../src/components/sidebar/sidebar';
+@import '../src/components/posts/post.scss';
+@import '../src/components/addPost/_addPost.scss';
+@import '../src/components/pages/singlepage/_single.scss';
+@import '../src/components/singlePost/_singlePost.scss';
+@import '../src/components/pages/writepost/writepost';
+@import '../src//components/pages/settings/settings';
+@import '../src/components/pages/login/_login.scss';
+@import '../src/components/pages/register/_register.scss';
+@import '../src/components/pages/joinus/_joinus.scss';
+.link{
+    text-decoration: none;
+    color: inherit;
+  }
